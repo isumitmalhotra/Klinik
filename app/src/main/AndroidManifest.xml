@@ -14,7 +14,19 @@
         android:theme="@style/Theme.KLINIK"
         tools:targetApi="31">
         <activity
-            android:name=".Available_doctors"
+            android:name=".Doctor6_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor5_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor4_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor3_profile"
+            android:exported="false" />
+        <activity
+            android:name=".Doctor2_profile"
             android:exported="false" />
         <activity
             android:name=".Utility.Splash_Screen"
@@ -29,15 +41,14 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
-            android:exported="false" />
-
-        <activity
             android:name=".OnBoardingScreen"
             android:exported="false" />
         <activity
+            android:name=".login"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
