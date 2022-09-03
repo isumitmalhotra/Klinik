@@ -42,7 +42,7 @@
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/actor"
                     android:text="@string/patient"
-                    android:textColor="@color/black"
+                    android:textColor="@color/main_screen_text"
 
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -70,7 +70,7 @@
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/actor"
                     android:text="@string/doctor"
-                    android:textColor="@color/black"
+                    android:textColor="@color/main_screen_text"
                     android:textSize="22sp"
                     android:textStyle="bold" />
             </RelativeLayout>
@@ -98,7 +98,7 @@
                     android:layout_gravity="center_horizontal"
                     android:fontFamily="@font/actor"
                     android:text="@string/chemist"
-                    android:textColor="@color/black"
+                    android:textColor="@color/main_screen_text"
                     android:textSize="22sp"
                     android:textStyle="bold" />
             </RelativeLayout>
