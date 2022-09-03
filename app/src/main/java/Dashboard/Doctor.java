@@ -1,14 +1,16 @@
-package com.excelsior.klinik;
+package Dashboard;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class loginactivity extends AppCompatActivity {
+import com.excelsior.klinik.R;
+
+public class Doctor extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loginactivity);
+        setContentView(R.layout.activity_doctor);
     }
 }
