@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //text
+    <color name="main_screen_text">#FFFFFFFF</color>
+
+    //card
+    <color name="main_screen_card">#A4C9E7FF</color>
+</resources>
