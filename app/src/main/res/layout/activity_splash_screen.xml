@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f6f7e9"
+    tools:context=".Utility.Splash_Screen">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center|center_vertical|center_horizontal"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/splash_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
+            android:layout_margin="10dp"
+            android:layout_marginBottom="20dp"
+            android:foregroundGravity="center|center_vertical|center_horizontal"
+            android:src="@drawable/logo_without_back"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/splash_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical|center_horizontal"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/actor"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="@string/from" />
+
+        <TextView
+            android:id="@+id/splash_my_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical|center_horizontal"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="@string/my_name"
+            android:textColor="#6a8768"
+            android:textSize="25sp" />
+    </LinearLayout>
+
+</RelativeLayout>
