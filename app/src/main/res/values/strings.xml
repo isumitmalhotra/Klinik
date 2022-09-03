@@ -4,6 +4,10 @@
     <string name="patient">Patient</string>
     <string name="chemist">Chemist</string>
     <string name="from">from</string>
+
+    <string name="book_now"><u>Book Now</u></string>
+    <string name="join_call"><b>Join Call</b></string>
+=======
     <string name="my_name">Excelsior</string>
     <string name="consult">Consult</string>
     <string name="doctor1_name"><b><u>Dr. Rahul</u></b></string>
@@ -12,6 +16,8 @@
     <string name="doctor4_name"><b><u>Dr. Rakesh</u></b></string>
     <string name="doctor5_name"><b><u>Dr. Sanket</u></b></string>
     <string name="doctor6_name"><b><u>Dr. Sakshi</u></b></string>
+    <string name="doctor_name"><b><u>Dr. Rahul</u></b></string>
+>>>>>>> origin/master
 
     <!--Titles-->
     <string name="first_slide_title">Search Your Doc !!</string>
