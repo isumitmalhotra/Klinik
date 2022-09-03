@@ -13,4 +13,7 @@
 
     //cards
     <color name="main_screen_card">#A4C9E7FF</color>
+
+    //main color
+    <color name="main_clr">#6a8768</color>
 </resources>

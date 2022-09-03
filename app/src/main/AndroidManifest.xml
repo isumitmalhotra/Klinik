@@ -20,10 +20,7 @@
             android:name=".RegisterActivity"
             android:exported="false" />
         <activity
-            android:name=".OnBoardingScreen"
-            android:exported="false" />
-        <activity
-            android:name=".login"
+            android:name=".loginactivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
