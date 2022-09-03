@@ -13,14 +13,14 @@ import android.widget.TextView;
 
 import com.excelsior.klinik.MainActivity;
 import com.excelsior.klinik.R;
-import com.google.firebase.auth.FirebaseAuth;
+
 
 public class Splash_Screen extends AppCompatActivity {
     private static int SPLASH_SCREEN = 1900;
     Animation fade;
     ImageView logo;
     TextView textView, textView1;
-    FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +40,6 @@ public class Splash_Screen extends AppCompatActivity {
         textView.setAnimation(fade);
         textView1.setAnimation(fade);
 
-        mAuth = FirebaseAuth.getInstance();
 
         new Handler().postDelayed(new Runnable() {
             @Override
