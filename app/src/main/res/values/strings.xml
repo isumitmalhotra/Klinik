@@ -3,4 +3,6 @@
     <string name="doctor">Doctor</string>
     <string name="patient">Patient</string>
     <string name="chemist">Chemist</string>
+    <string name="from">from</string>
+    <string name="my_name">Excelsior</string>
 </resources>
