@@ -69,11 +69,47 @@
                 app:cardCornerRadius="10dp"
                 >
 
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/pateint5"
-                    />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    >
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/pateint5"
+                        android:layout_margin="10dp"
+                        android:layout_marginTop="15dp"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5:45 pm    "
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="5 Sept   "
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
