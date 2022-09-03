@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:src="@drawable/Klinik_without_bkg"
+            android:src="@drawable/logo_without_back"
             android:transitionName="logo_image"
             android:contentDescription="Application logo" />
         <TextView
