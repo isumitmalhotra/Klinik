@@ -7,7 +7,7 @@
 
     <string name="book_now"><u>Book Now</u></string>
     <string name="join_call"><b>Join Call</b></string>
-=======
+    =======
     <string name="my_name">Excelsior</string>
     <string name="consult">Consult</string>
     <string name="doctor1_name"><b><u>Dr. Rahul</u></b></string>
@@ -17,7 +17,35 @@
     <string name="doctor5_name"><b><u>Dr. Sanket</u></b></string>
     <string name="doctor6_name"><b><u>Dr. Sakshi</u></b></string>
     <string name="doctor_name"><b><u>Dr. Rahul</u></b></string>
->>>>>>> origin/master
+
+    <string name="consultant_name_1"><b>Shaina</b></string>
+    <string name="consultant_name_2"><b>Sumit</b></string>
+    <string name="consultant_name_3"><b>Samarth</b></string>
+    <string name="consultant_name_4"><b>Savneet</b></string>
+
+    <string name="consultant_age_1">20</string>
+    <string name="consultant_age_2">25</string>
+    <string name="consultant_age_3">22</string>
+    <string name="consultant_age_4">18</string>
+
+
+    <string name="apointment_time_1">5:45pm</string>
+    <string name="apointment_time_2">5:45pm</string>
+    <string name="apointment_time_3">5:45pm</string>
+    <string name="apointment_time_4">5:45pm</string>
+
+    <string name="apointment_date_1">5 Sept</string>
+    <string name="apointment_date_2">6 Sept</string>
+    <string name="apointment_date_3">7 Sept</string>
+    <string name="apointment_date_4">8 Sept</string>
+
+    <string name="problem_1">Body Pain from few Days</string>
+    <string name="problem_2">Fever</string>
+    <string name="problem_3">Vomitting</string>
+    <string name="problem_4">Migrane</string>
+
+
+    >>>>>>> origin/master
 
     <!--Titles-->
     <string name="first_slide_title">Search Your Doc !!</string>
