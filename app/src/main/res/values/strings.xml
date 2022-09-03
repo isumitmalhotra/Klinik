@@ -5,7 +5,13 @@
     <string name="chemist">Chemist</string>
     <string name="from">from</string>
     <string name="my_name">Excelsior</string>
-    <string name="doctor_name"><b><u>Dr. Rahul</u></b></string>
+    <string name="consult">Consult</string>
+    <string name="doctor1_name"><b><u>Dr. Rahul</u></b></string>
+    <string name="doctor2_name"><b><u>Dr. Sachin</u></b></string>
+    <string name="doctor3_name"><b><u>Dr. Sushma</u></b></string>
+    <string name="doctor4_name"><b><u>Dr. Rakesh</u></b></string>
+    <string name="doctor5_name"><b><u>Dr. Sanket</u></b></string>
+    <string name="doctor6_name"><b><u>Dr. Sakshi</u></b></string>
 
     <!--Titles-->
     <string name="first_slide_title">Search Your Doc !!</string>
