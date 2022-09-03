@@ -6,6 +6,7 @@
     <string name="from">from</string>
     <string name="my_name">Excelsior</string>
     <string name="doctor_profile">Doctor Profile</string>
+    <string name="doctor_name"><u>Dr. Rohit</u></string>
 
     <!--Titles-->
     <string name="first_slide_title">Search Your Doc !!</string>
