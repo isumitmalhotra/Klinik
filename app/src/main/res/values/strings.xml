@@ -7,10 +7,10 @@
 
     <string name="book_now"><u>Book Now</u></string>
     <string name="join_call"><b>Join Call</b></string>
-=======
+    =======
     <string name="my_name">Excelsior</string>
     <string name="doctor_name"><b><u>Dr. Rahul</u></b></string>
->>>>>>> origin/master
+    >>>>>>> origin/master
 
     <!--Titles-->
     <string name="first_slide_title">Search Your Doc !!</string>
