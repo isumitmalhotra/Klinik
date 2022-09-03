@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#9dbc9b"
-    tools:context=".Doctor4_profile">
+    tools:context=".Upcoming_Consultations_1">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,15 +26,15 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="0dp"
                 android:padding="20dp"
-                android:text="@string/doctor4_name"
+                android:text="@string/consultant_name_2"
                 android:textColor="@color/black"
                 android:textSize="35sp" />
 
             <ImageView
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:layout_marginStart="40dp"
-                android:layout_marginLeft="40dp"
+                android:layout_marginStart="70dp"
+                android:layout_marginLeft="70dp"
                 android:background="@drawable/profile_circle"
                 android:padding="10dp"
                 android:src="@drawable/patient1" />
@@ -47,7 +47,7 @@
             android:layout_height="match_parent"
             android:layout_below="@+id/image"
             android:layout_alignParentBottom="true"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="150dp"
             android:background="@drawable/uplift_back"
             android:orientation="vertical">
 
@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-3dp"
-                        android:text="35 Years"
+                        android:text="@string/consultant_age_2"
                         android:textColor="@color/black"
                         android:textSize="25dp" />
                 </LinearLayout>
@@ -116,14 +116,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-5dp"
-                        android:text="Degree" />
+                        android:text="Appointment Date" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-3dp"
-                        android:text="MS in Neurology"
+                        android:text="@string/apointment_date_2"
                         android:textColor="@color/black"
                         android:textSize="25dp" />
                 </LinearLayout>
@@ -154,14 +154,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-5dp"
-                        android:text="Specialization" />
+                        android:text="Appointment Time" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-3dp"
-                        android:text="Brain &amp; Neuro"
+                        android:text="@string/apointment_time_2"
                         android:textColor="@color/black"
                         android:textSize="25dp" />
                 </LinearLayout>
@@ -192,51 +192,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-5dp"
-                        android:text="Work Experience" />
+                        android:text="Problem" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-3dp"
-                        android:text="9 Years"
-                        android:textColor="@color/black"
-                        android:textSize="25dp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:layout_marginStart="50dp"
-                    android:background="@drawable/profile_small_back"
-                    android:padding="5dp"
-                    android:src="@drawable/hospital" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="-5dp"
-                        android:text="Hospital/Clinic" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginTop="-3dp"
-                        android:text="Clinic"
+                        android:text="@string/problem_2"
                         android:textColor="@color/black"
                         android:textSize="25dp" />
                 </LinearLayout>
@@ -249,8 +212,9 @@
                 android:layout_marginBottom="20dp"
                 android:backgroundTint="#9dbc9b"
                 android:gravity="center_horizontal|center|center_vertical"
-                android:text="@string/consult"
+                android:text="@string/join_call"
                 android:textStyle="bold" />
+
         </LinearLayout>
 
 
