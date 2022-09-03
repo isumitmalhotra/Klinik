@@ -85,7 +85,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-3dp"
-                        android:text="45 Years"
+                        android:text="50 Years"
                         android:textColor="@color/black"
                         android:textSize="25dp" />
                 </LinearLayout>
@@ -199,7 +199,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-3dp"
-                        android:text="6 Years"
+                        android:text="12 Years"
                         android:textColor="@color/black"
                         android:textSize="25dp" />
                 </LinearLayout>
