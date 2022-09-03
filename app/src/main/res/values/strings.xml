@@ -3,6 +3,8 @@
     <string name="doctor">Doctor</string>
     <string name="patient">Patient</string>
     <string name="chemist">Chemist</string>
+    <string name="my_name">Excelsior</string>
+    <string name="from">from</string>
 
     <!--Titles-->
     <string name="first_slide_title">Search Your Doc !!</string>
@@ -20,4 +22,6 @@
     <string name="skip_btn">Skip</string>
     <string name="next_btn">Next</string>
     <string name="let_get_started">Lets Get Started</string>
+
+
 </resources>
