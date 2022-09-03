@@ -122,7 +122,7 @@
             android:layout_height="wrap_content"
             android:text="Create an Account"
             android:textColor="#fff"
-            android:background="@color/theme"
+            android:background="@color/main_clr"
             android:transitionName="button_tran"/>
 
         <Button
