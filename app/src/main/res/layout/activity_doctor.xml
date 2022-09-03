@@ -52,7 +52,10 @@
         android:id="@+id/scroll_horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text">
+        android:layout_below="@+id/text"
+        android:layout_marginStart="15dp"
+        android:fadeScrollbars="true"
+        android:scrollbars="none">
 
         <GridLayout
             android:layout_width="wrap_content"
@@ -66,49 +69,78 @@
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
                 android:elevation="11dp"
-                app:cardCornerRadius="10dp"
-                >
+                app:cardCornerRadius="10dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center_horizontal"
-                    android:orientation="horizontal"
-                    >
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@drawable/pateint5"
-                        android:layout_margin="10dp"
-                        android:layout_marginTop="15dp"
-                        />
+                    android:orientation="vertical">
+
                     <LinearLayout
+                        android:id="@+id/linearLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="16dp"
-                        android:orientation="vertical"
-                        >
-                        <TextView
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/pateint5" />
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="5:45 pm    "
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            />
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="5 Sept   "
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:layout_gravity="center"
-                            />
+                            android:layout_marginTop="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5:45 pm    "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5 Sept   "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
                     </LinearLayout>
 
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/actor"
+                        android:text="Shaina"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/actor"
+                        android:text="@string/join_call"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 
@@ -117,27 +149,240 @@
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
                 android:elevation="11dp"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="10dp">
 
-                />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/pateint5" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5:45 pm    "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="6 Sept   "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/actor"
+                        android:text="Sumit"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/actor"
+                        android:text="@string/join_call"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
                 android:elevation="11dp"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="10dp">
 
-                />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/pateint5" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5:45 pm    "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="7 Sept   "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/actor"
+                        android:text="Samarth"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/actor"
+                        android:text="@string/join_call"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="150dp"
                 android:layout_height="170dp"
                 android:layout_margin="10dp"
                 android:elevation="11dp"
-                app:cardCornerRadius="10dp"
+                app:cardCornerRadius="10dp">
 
-                />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="15dp"
+                            android:src="@drawable/pateint5" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="5:45 pm    "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="8 Sept   "
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="@font/actor"
+                        android:text="Savneet"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="7dp"
+                        android:fontFamily="@font/actor"
+                        android:text="@string/join_call"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
 
 
         </GridLayout>
@@ -163,18 +408,21 @@
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:fontFamily="@font/actor"
-            android:text="Patients Profiles"
+            android:text="Previous Patients Profiles"
             android:textColor="@color/black"
             android:textSize="20sp" />
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:scrollbars="none">
 
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
                 android:orientation="horizontal">
 
                 <ImageView
@@ -210,20 +458,6 @@
                     android:src="@drawable/pateint4" />
 
 
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/circle"
-                    android:src="@drawable/pateint5" />
-
-
-                <ImageView
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
-                    android:layout_margin="10dp"
-                    android:background="@drawable/circle"
-                    android:src="@drawable/patient6" />
             </LinearLayout>
         </HorizontalScrollView>
 

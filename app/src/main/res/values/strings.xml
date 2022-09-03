@@ -5,6 +5,8 @@
     <string name="chemist">Chemist</string>
     <string name="my_name">Excelsior</string>
     <string name="from">from</string>
+    <string name="book_now"><u>Book Now</u></string>
+    <string name="join_call"><b>Join Call</b></string>
 
     <!--Titles-->
     <string name="first_slide_title">Search Your Doc !!</string>
