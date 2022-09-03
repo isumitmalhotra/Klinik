@@ -37,7 +37,7 @@
                 android:layout_marginLeft="70dp"
                 android:background="@drawable/profile_circle"
                 android:padding="10dp"
-                android:src="@drawable/ic_baseline_person_24" />
+                android:src="@drawable/patient1" />
 
 
         </LinearLayout>
@@ -236,7 +236,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginTop="-3dp"
-                        android:text="45 Years"
+                        android:text="Clinic"
                         android:textColor="@color/black"
                         android:textSize="25dp" />
                 </LinearLayout>
