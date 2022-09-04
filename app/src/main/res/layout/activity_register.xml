@@ -42,31 +42,56 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
             android:orientation="vertical">
-
 
             <EditText
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_margin="15dp"
-
+                android:layout_margin="10dp"
+                android:hint="Email"
+                android:background="@drawable/login_back"
                 android:paddingLeft="15dp" />
 
+
             <EditText
+                android:hint="Username"
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_back"
+                android:paddingLeft="15dp" />
+
+
+            <EditText
+                android:hint="Password"
                 android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_margin="15dp"
-
+                android:layout_margin="10dp"
+                android:background="@drawable/login_back"
                 android:paddingLeft="15dp" />
+
+            <EditText
+                android:hint="Phone Number"
+                android:id="@+id/phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_back"
+                android:paddingLeft="15dp" />
+
+
+
+
 
         </LinearLayout>
 
         <Button
-            android:id="@+id/reg_btn"
+            android:id="@+id/register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/dark_green"
@@ -75,14 +100,19 @@
             android:transitionName="button_tran" />
 
         <Button
-            android:id="@+id/login_screen"
+            android:id="@+id/login_btn_through_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#00000000"
             android:fontFamily="@font/poppins_regular"
             android:text="Already have an Account? LogIn."
             android:transitionName="login_signup_tran" />
-
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Login"
+    android:textSize="30sp"
+    android:id="@+id/loginbutton"/>
 
     </LinearLayout>
 
