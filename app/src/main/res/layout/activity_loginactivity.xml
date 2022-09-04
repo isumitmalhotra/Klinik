@@ -15,7 +15,7 @@
         <ImageView
             android:id="@+id/Logo_image"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="130dp"
             android:src="@drawable/logo_without_back"
             android:transitionName="logo_image" />
 
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:transitionName="logo_text"
             android:text="Hello there, Welcome Back"
-            android:textSize="40sp"
+            android:textSize="34sp"
             android:fontFamily="@font/poppins_semibold" />
         <TextView
             android:id="@+id/slogan_name"
@@ -38,7 +38,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="20dp"
             android:orientation="vertical">
 
@@ -46,19 +46,23 @@
                 android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:layout_margin="15dp"
-
+                android:layout_margin="10dp"
+                android:hint="Email"
+                android:background="@drawable/login_back"
                 android:paddingLeft="15dp" />
 
 
 
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_margin="15dp"
 
-            android:paddingLeft="15dp" />
+
+            <EditText
+                android:hint="Password"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/login_back"
+                android:paddingLeft="15dp" />
 
 
             <Button
@@ -73,7 +77,7 @@
                 android:layout_margin="5dp"/>
 
             <Button
-                android:id="@+id/login_btn"
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Go"

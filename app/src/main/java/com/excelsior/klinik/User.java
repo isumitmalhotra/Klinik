@@ -3,18 +3,19 @@ package com.excelsior.klinik;
 public class User {
 
 
-    public String email;
+    public String name,email,phone;
 
     public User()
     {
 
     }
 
-    public User(String s_email)
+
+    public User(String name,String email,String phone)
     {
-
-        this.email=s_email;
-
+        this.name=name;
+        this.email=email;
+        this.phone=phone;
     }
 
 }

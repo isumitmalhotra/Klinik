@@ -49,7 +49,7 @@ public class OnBoardingScreen extends AppCompatActivity {
     }
 
     public void skip(View view){
-        startActivity(new Intent(this,Dashboard.Patient.class));
+        startActivity(new Intent(this, Patient.class));
         finish();
 
     }

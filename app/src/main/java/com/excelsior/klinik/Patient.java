@@ -1,4 +1,4 @@
-package Dashboard;
+package com.excelsior.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
 

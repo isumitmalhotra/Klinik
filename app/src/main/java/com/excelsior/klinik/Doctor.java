@@ -1,4 +1,4 @@
-package Dashboard;
+package com.excelsior.klinik;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,10 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
-import com.excelsior.klinik.R;
-import com.excelsior.klinik.previou_pateint2;
-import com.excelsior.klinik.previou_patient1;
 
 public class Doctor extends AppCompatActivity {
 
