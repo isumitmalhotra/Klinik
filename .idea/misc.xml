@@ -11,6 +11,10 @@
         <entry key="app/src/main/res/layout/activity_child_specialist_doctor.xml" value="0.29583333333333334" />
         <entry key="app/src/main/res/layout/activity_doctor.xml" value="0.30512820512820515" />
         <entry key="app/src/main/res/layout/activity_doctor1_profile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_doctor2_profile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_doctor3_profile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_doctor4_profile.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/activity_doctor5_profile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_list_of_hospitals.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_loginactivity.xml" value="0.29583333333333334" />
@@ -22,7 +26,7 @@
         <entry key="app/src/main/res/layout/activity_profile.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_register.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/activity_register_final.xml" value="0.25925925925925924" />
-        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2246376811594203" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.2957039653391078" />
         <entry key="app/src/main/res/layout/product_item.xml" value="0.2861111111111111" />
         <entry key="app/src/main/res/layout/slides_layout.xml" value="0.3098958333333333" />
       </map>

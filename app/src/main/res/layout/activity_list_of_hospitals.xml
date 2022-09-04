@@ -1,78 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
+    android:rowCount="10"
+    android:columnCount="2"
     app:cardElevation="10dp">
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
-
-        <RelativeLayout
-            android:id="@+id/layout_background"
-            android:layout_width="match_parent"
-            android:layout_height="400px"
-            android:background="@color/black">
-
-
-
-        </RelativeLayout>
-
-
-        <TextView
-            android:id="@+id/txt_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Johal Multi Speciality Hospital"
-            android:textStyle="bold"
-            android:padding="5dp"/>
-
-        <TextView
-            android:id="@+id/txt_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Hoshiarpur Road, Near Dhilwaan Chowk Rama mandi,Jalandhar - 144005"
-            android:padding="5dp"/>
-        <TextView
-            android:id="@+id/contact"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="Contact no. 0181 241 0820, 241 0620"
-            android:padding="5dp"/>
-
+        android:layout_margin="20dp"
+        >
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="5dp"
-            android:weightSum="3" >
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@color/black"
+                android:src="@drawable/jphal"
+                />
+            <TextView
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"/>
-
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="40dp"
-                android:backgroundTint="#94ebab"
-                android:text="Visit"
-                android:textSize="10dp"
+                android:text="Johal Multispeciality Hospital"
+                android:textSize="15sp"
                 android:textColor="@color/black"
-                android:layout_margin="5dp"/>
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Hoshiarpur Road near Dhilwan Chowk Rama Mandi, Jalandhar-144005"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Contact no. 01812410820"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visit"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:background="@color/light_green"
+                />
         </LinearLayout>
 
 
-    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@color/black"
+                android:src="@drawable/jphal"
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Patel Hospital                .                                       .      "
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Hoshiarpur Road near Dhilwan Chowk Rama Mandi, Jalandhar-144005"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Contact no. 01812410820"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visit"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/light_green"
+                />
+        </LinearLayout>
 
 
 
-</com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@color/black"
+                android:src="@drawable/jphal"
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Tagore Hospital"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Hoshiarpur Road near Dhilwan Chowk Rama Mandi, Jalandhar-144005"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Contact no. 01812410820"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visit"
+                android:layout_margin="5dp"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:background="@color/light_green"
+                />
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginLeft="-5dp"
+        android:layout_height="wrap_content"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:background="@color/black"
+                android:src="@drawable/jphal"
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Patnaik Hospital"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Hoshiarpur Road near Dhilwan Chowk Rama Mandi, Jalandhar-144005"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                />
+            <TextView
+                android:layout_width="170dp"
+                android:layout_height="wrap_content"
+                android:text="Contact no. 01812410820"
+                android:textSize="15sp"
+                android:textColor="@color/black"
+                />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visit"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@color/light_green"
+                />
+        </LinearLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</GridLayout>
 

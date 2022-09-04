@@ -11,7 +11,7 @@ import android.widget.Toast;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-    CardView patient,doctor,chemist;
+    CardView patient,doctor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         patient=findViewById(R.id.patient);
         doctor=findViewById(R.id.doctor);
-        chemist=findViewById(R.id.chemist);
+
 
         patient.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,14 +38,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        chemist.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Toast.makeText(MainActivity.this, "Logged Out", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
-                finish();
-            }
-        });
+
     }
 }

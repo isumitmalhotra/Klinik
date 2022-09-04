@@ -15,13 +15,29 @@
         android:layout_marginTop="50dp"
         android:src="@drawable/first_image" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/firstscreen"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/actor"
+        android:gravity="center"
+        android:text="Sign in as "
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/firstscreen"
         android:layout_marginStart="25dp"
         android:layout_marginLeft="25dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="65dp"
         android:layout_marginEnd="25dp"
         android:layout_marginRight="25dp"
         android:layout_marginBottom="25dp"
@@ -82,32 +98,7 @@
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/chemist"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_margin="20dp"
-            android:layout_marginTop="5dp"
-            android:clickable="true">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:background="@drawable/card_bg_main"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:fontFamily="@font/actor"
-                    android:text="@string/chemist"
-                    android:textColor="@color/main_screen_text"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
 
     </GridLayout>
 

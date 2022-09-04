@@ -120,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/actor"
-                        android:text="Paediatrician"
+                        android:text="Child Specialist"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -166,7 +166,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/actor"
-                        android:text="Paediatrician"
+                        android:text="Psychiatrist"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -214,7 +214,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/actor"
-                        android:text="Paediatrician"
+                        android:text="Cardiologist"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -261,7 +261,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/actor"
-                        android:text="Paediatrician"
+                        android:text="Dermatologist"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
@@ -309,7 +309,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/actor"
-                        android:text="Paediatrician"
+                        android:text="Gastroenterologists"
                         android:textColor="@color/black" />
                 </LinearLayout>
 
