@@ -56,7 +56,7 @@
             android:name=".OnBoardingScreen"
             android:exported="false" />
         <activity
-            android:name=".login"
+            android:name=".LoginActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

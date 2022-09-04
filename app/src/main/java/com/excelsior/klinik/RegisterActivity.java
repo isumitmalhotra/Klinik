@@ -1,155 +1,126 @@
 package com.excelsior.klinik;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity{
-    TextInputLayout regName, regUsername, regEmail, regPhoneNo, regPassword;
-    Button regBtn, regToLoginBtn;
+    EditText regEmail, regPassword;
+    Button register, login;
 
-    //private static final String TAG = "SignUp";
-
-
-    FirebaseDatabase rootNode;
-    DatabaseReference reference;
-
+    FirebaseAuth mAuth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        //Hooks all element
-        regName = findViewById(R.id.reg_name);
-        regUsername = findViewById(R.id.reg_username);
-        regEmail = findViewById(R.id.reg_email);
-        regPassword = findViewById(R.id.reg_password);
-        regPhoneNo = findViewById(R.id.reg_phone);
-        regBtn = findViewById(R.id.reg_btn);
-        regToLoginBtn = findViewById(R.id.login_btn);
+        regEmail = findViewById(R.id.email);
+        regPassword = findViewById(R.id.password);
+        login = findViewById(R.id.login_screen);
+        register = findViewById(R.id.reg_btn);
 
-        //save data in firebase on button click
-        regBtn.setOnClickListener(new View.OnClickListener() {
+        mAuth = FirebaseAuth.getInstance();
+
+
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                rootNode = FirebaseDatabase.getInstance();
-                reference = rootNode.getReference("users");
-
-                if(!validateName() | !validateUserName() | !validaeEmail() | !validatePassword() | !validatePhoneNo()){
-                    return;
-                }
-
-
-                //Get all the values
-                String name = regName.getEditText().getText().toString();
-                String username = regUsername.getEditText().getText().toString();
-                String email = regEmail.getEditText().getText().toString();
-                String phoneNo = regPhoneNo.getEditText().getText().toString();
-                String password = regPassword.getEditText().getText().toString();
-
-                UserHelperClass helperClass = new UserHelperClass(name, username, email, phoneNo, password);
-
-                reference.child(username).setValue(helperClass);
+                Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                registerUser();
             }
         });
     }
 
-    private boolean validateName() {
-        String val = regName.getEditText().getText().toString();
+    private void registerUser() {
 
-        if (val.isEmpty()) {
-            regName.setError("Field cannot be empty");
-            return false;
-        } else {
-            regName.setError(null);
-            regName.setErrorEnabled(false);
-            return true;
+
+        String s_email = regEmail.getText().toString().trim();
+
+        String s_password = regPassword.getText().toString().trim();
+
+
+        if (s_email.isEmpty()) {
+            regEmail.setError("Email Required");
+            regEmail.requestFocus();
+            return;
         }
+
+
+        if (s_password.isEmpty()) {
+            regPassword.setError("Password Required");
+            regPassword.requestFocus();
+            return;
+        }
+
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(s_email).matches()) {
+            regEmail.setError("Enter a valid Email address");
+            regEmail.requestFocus();
+            return;
+        }
+
+        if (s_password.length() < 6) {
+            regPassword.setError("Password Required");
+            regPassword.requestFocus();
+            return;
+        }
+
+        mAuth.createUserWithEmailAndPassword(s_email, s_password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()) {
+                    User user = new User(s_email);
+
+                    FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance()
+                            .getCurrentUser().getUid()).setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            if (task.isSuccessful()) {
+                                Toast.makeText(RegisterActivity.this, "Registered Successfully", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                            } else {
+                                Toast.makeText(RegisterActivity.this, "Registration Failed", Toast.LENGTH_SHORT).show();
+                            }
+                        }
+                    });
+                } else {
+                    Toast.makeText(RegisterActivity.this, task.getException().getMessage(), Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
     }
 
-    private boolean validateUserName() {
-        String val = regUsername.getEditText().getText().toString();
-        String noWhiteSpace = "\\A\\w{4,20}\\z";
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if (mAuth.getCurrentUser() != null) {
+            Toast.makeText(RegisterActivity.this, "User already exist. you can login", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(intent);
 
-        if (val.isEmpty()) {
-            regUsername.setError("Field cannot be empty");
-            return false;
-        }else if(val.length()>=15){
-            regUsername.setError("username too long");
-            return false;
-        }else if(!val.matches(noWhiteSpace)){
-            regUsername.setError("White spaces are not allowed");
-            return false;
-        }
-        else {
-            regUsername.setError(null);
-            regUsername.setErrorEnabled(false);
-            return true;
         }
     }
-
-    private boolean validatePhoneNo() {
-        String val = regPhoneNo.getEditText().getText().toString();
-
-        if (val.isEmpty()) {
-            regPhoneNo.setError("Field cannot be empty");
-            return false;
-        } else {
-            regPhoneNo.setError(null);
-            regPhoneNo.setErrorEnabled(false);
-            return true;
-        }
-    }
-
-    private boolean validaeEmail()  {
-        String val = regEmail.getEditText().getText().toString();
-        String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
-        if (val.isEmpty()) {
-            regEmail.setError("Field cannot be empty");
-            return false;
-        }else if(!val.matches(emailPattern)){
-            regEmail.setError("Invalid email address");
-            return false;
-        }
-        else {
-            regEmail.setError(null);
-            regEmail.setErrorEnabled(false);
-            return true;
-        }
-    }
-
-    private boolean validatePassword() {
-        String val = regPassword.getEditText().getText().toString();
-        String passwordVal = "^" +
-                //"(?=.*[0-9])" +         //at least 1 digit
-                //"(?=.*[a-z])" +         //at least 1 lower case letter
-                //"(?=.*[A-Z])" +         //at least 1 upper case letter
-                "(?=.*[a-zA-Z])" +      //any letter
-                "(?=.*[@#$%^&+=])" +    //at least 1 special character
-                "(?=\\S+$)" +           //no white spaces
-                ".{8,}" +               //at least 8 characters
-                "$";
-
-        if (val.isEmpty()) {
-            regPassword.setError("Field cannot be empty");
-            return false;
-        }else if(!val.matches(passwordVal)){
-            regPassword.setError("Password is too weak");
-            return false;
-        }
-
-        else {
-            regPassword.setError(null);
-            return true;
-        }
-    }
-
-
 }

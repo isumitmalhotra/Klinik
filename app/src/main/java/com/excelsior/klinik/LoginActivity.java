@@ -1,179 +1,91 @@
 package com.excelsior.klinik;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActivityOptions;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.Query;
-import com.google.firebase.database.ValueEventListener;
-
-public class LoginActivity extends AppCompatActivity {
-
-    Button callSignUp,login_btn;
-    ImageView image;
-    TextView logoText, sloganText;
-    TextInputLayout username, password;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
+public class LoginActivity extends AppCompatActivity  {
+
+    EditText email, password;
+    Button login;
+    FirebaseAuth auth;
+    TextView register;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_loginactivity);
-        //Hooks
-        callSignUp = findViewById(R.id.signup_screen);
-        image = findViewById(R.id.Logo_image);
-        logoText = findViewById(R.id.logo_name);
-        sloganText = findViewById(R.id.slogan_name);
-        username = findViewById(R.id.username);
+
+        email = findViewById(R.id.email);
         password = findViewById(R.id.password);
-        login_btn = findViewById(R.id.login_btn);
-
-        callSignUp.setOnClickListener(new View.OnClickListener() {
-            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+        login = findViewById(R.id.login_btn);
+        auth = FirebaseAuth.getInstance();
+        register = findViewById(R.id.register);
+        auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this , RegisterActivity.class);
-
-                Pair[] pairs = new Pair[7];
-
-                pairs[0] = new Pair<View,String>(image,"logo_image");
-                pairs[1] = new Pair<View,String>(logoText,"logo_text");
-                pairs[2] = new Pair<View,String>(sloganText,"logo_desc");
-                pairs[3] = new Pair<View,String>(username,"username_tran");
-                pairs[4] = new Pair<View,String>(password,"password_tran");
-                pairs[5] = new Pair<View,String>(login_btn,"button_tran");
-                pairs[6] = new Pair<View,String>(callSignUp,"login_signup_tran");
-
-                ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(LoginActivity.this,pairs);
-                startActivity(intent,options.toBundle());
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                startActivity(intent);
             }
         });
 
-        login_btn.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                loginUser();
+                String txt_email = email.getText().toString();
+                String txt_password = password.getText().toString();
+
+                if (txt_email.isEmpty()) {
+                    email.setError("Email Required");
+                    email.requestFocus();
+
+                } else if (txt_password.isEmpty()) {
+                    password.setError("Password Required");
+                    password.requestFocus();
+                } else {
+                    loginUser(txt_email, txt_password);
+                }
+
+            }
+        });
+
+    }
+
+    private void loginUser(String txt_email, String txt_password) {
+        auth.signInWithEmailAndPassword(txt_email, txt_password).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
+            @Override
+            public void onSuccess(AuthResult authResult) {
+                Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
+
+            }
+
+        });
+        auth.signInWithEmailAndPassword(txt_email, txt_password).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                Toast.makeText(LoginActivity.this, "Invalid Credentials", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
 
 
-    private boolean validateUserName() {
-        String val = username.getEditText().getText().toString();
-
-        if (val.isEmpty()) {
-            username.setError("Field cannot be empty");
-            return false;
-        }
-        else {
-            username.setError(null);
-            username.setErrorEnabled(false);
-            return true;
-        }
-    }
-
-    private boolean validatePassword() {
-        String val = password.getEditText().getText().toString();
-
-
-        if (val.isEmpty()) {
-            password.setError("Field cannot be empty");
-            return false;
-        }
-        else {
-            password.setError(null);
-            password.setErrorEnabled(false);
-            return true;
-        }
-    }
-
-    public void loginUser(){
-        //validate login info
-
-        if(!validateUserName() | !validatePassword()){
-            return;
-        }
-        else{
-            isUser();
-        }
-    }
-
-    private void isUser() {
-
-
-        final String userEnteredUsername = username.getEditText().getText().toString().trim();
-        final String userEnteredPasword = password.getEditText().getText().toString().trim();
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("users");
-        Query checkUser = reference.orderByChild("username").equalTo(userEnteredUsername);
-
-        ((Query) checkUser).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                if(snapshot.exists()){
-
-                    username.setError(null);
-                    username.setErrorEnabled(false);
-
-                    String passwordFromDB = snapshot.child(userEnteredUsername).child("password").getValue(String.class);
-
-                    if(passwordFromDB.equals(userEnteredPasword)){
-
-                        username.setError(null);
-                        username.setErrorEnabled(false);
-
-
-
-                        String nameFromDB = snapshot.child(userEnteredUsername).child("name").getValue(String.class);
-                        String usernameFromDB = snapshot.child(userEnteredUsername).child("username").getValue(String.class);
-                        String phoneNoFromDB = snapshot.child(userEnteredUsername).child("phoneNo").getValue(String.class);
-                        String emailFromDB = snapshot.child(userEnteredUsername).child("email").getValue(String.class);
-
-                        Intent intent=new Intent(LoginActivity.this,Available_doctors.class);
-                        //Intent intent = new Intent(getApplicationContext(),Dashboard.Patient.class);
-                        intent.putExtra( "name",nameFromDB);
-                        intent.putExtra( "username",usernameFromDB);
-                        intent.putExtra( "email",emailFromDB);
-                        intent.putExtra( "phoneNo",phoneNoFromDB);
-                        intent.putExtra( "password",passwordFromDB);
-
-                        startActivity(intent);
-                    }
-                    else{
-                        password.setError("Wrong Password");
-                        password.requestFocus();
-                    }
-
-                }
-                else {
-                    username.setError("No Such User Exists");
-                    username.requestFocus();
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
 }
