@@ -426,6 +426,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/patient1"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"
@@ -434,6 +435,7 @@
 
 
                 <ImageView
+                    android:id="@+id/patient2"
                     android:layout_width="70dp"
                     android:layout_height="70dp"
                     android:layout_margin="10dp"

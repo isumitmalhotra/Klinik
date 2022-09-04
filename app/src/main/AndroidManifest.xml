@@ -26,6 +26,15 @@
             android:name=".Upcoming_Consultations_1"
             android:exported="false" />
         <activity
+            android:name=".previou_pateint2"
+            android:exported="false" />
+        <activity
+            android:name=".previou_patient1"
+            android:exported="false" />
+        <activity
+            android:name=".list_of_hospitals"
+            android:exported="false" />
+        <activity
             android:name=".Doctor6_profile"
             android:exported="false" />
         <activity

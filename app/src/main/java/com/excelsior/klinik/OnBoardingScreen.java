@@ -49,7 +49,7 @@ public class OnBoardingScreen extends AppCompatActivity {
     }
 
     public void skip(View view){
-        startActivity(new Intent(this,Dashboard.Patient.class));
+        startActivity(new Intent(this,Patient.class));
         finish();
 
     }
@@ -107,7 +107,7 @@ public class OnBoardingScreen extends AppCompatActivity {
             else
 
             {
-                animation = AnimationUtils.loadAnimation(OnBoardingScreen.this,R.anim.on_boarding_button_anim);
+                animation = AnimationUtils.loadAnimation(OnBoarding.this,R.anim.on_boarding_button_anim);
                 letsGetStarted.setAnimation(animation);
                 letsGetStarted.setVisibility(View.VISIBLE);
 
