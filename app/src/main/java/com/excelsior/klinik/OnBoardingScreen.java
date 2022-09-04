@@ -14,7 +14,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-class OnBoarding extends AppCompatActivity {
+public class OnBoardingScreen extends AppCompatActivity {
 
     //Hooks
     ViewPager viewPager;
@@ -49,7 +49,7 @@ class OnBoarding extends AppCompatActivity {
     }
 
     public void skip(View view){
-        startActivity(new Intent(this,Dashboard.Patient.class));
+        startActivity(new Intent(this,Patient.class));
         finish();
 
     }

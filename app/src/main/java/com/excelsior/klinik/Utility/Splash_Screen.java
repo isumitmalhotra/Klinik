@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.excelsior.klinik.MainActivity;
 import com.excelsior.klinik.R;
+import com.excelsior.klinik.RegisterActivity;
 
 
 public class Splash_Screen extends AppCompatActivity {
@@ -44,7 +45,7 @@ public class Splash_Screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash_Screen.this, MainActivity.class);
+                Intent intent = new Intent(Splash_Screen.this, RegisterActivity.class);
                 startActivity(intent);
                 finish();
             }
